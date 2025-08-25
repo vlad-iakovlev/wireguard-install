@@ -33,7 +33,7 @@ function load_peer_names() {
 
 function show() {
 	wg show | while IFS= read -r line; do
-		if [[ "${line}" =~ ^[[:space:]]*(.*)[[:space:]]*:[[:space:]]*(.*)[[:space:]]*$ ]]; then
+		if [[ "${line}" =~ ^[[:space:]]*([^:]+):[[:space:]](.*)$ ]]; then
 			key="${BASH_REMATCH[1]}"
 			value="${BASH_REMATCH[2]}"
 
