@@ -41,9 +41,9 @@ function show() {
 				echo_line "${key}" "${value}" "\e[32m"
 			elif [[ "${key}" == "peer" ]]; then
 				echo_line "peer" "${peer_names["${value}"]}" "\e[33m"
-				echo_line "	public key" "${value}"
+				echo_line "  public key" "${value}"
 			else
-				echo_line "	${key}" "${value}"
+				echo_line "  ${key}" "${value}"
 			fi
 		else
 			echo ""
